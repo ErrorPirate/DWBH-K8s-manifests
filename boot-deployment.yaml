@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-container
-          image: errorpirate/dwbh-backend:110
+          image: errorpirate/dwbh-backend:1
           imagePullPolicy: Always
           ports:
             - containerPort: 8089
