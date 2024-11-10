@@ -21,7 +21,6 @@ spec:
           volumeMounts: 
             - name: env-file 
               mountPath: /usr/bin 
-              subPath: .env 
       volumes: 
         - name: env-file 
           configMap: 
