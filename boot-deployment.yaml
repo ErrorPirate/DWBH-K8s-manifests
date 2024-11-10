@@ -14,13 +14,18 @@ spec:
     spec:
       containers:
         - name: spring-container
-          image: errorpirate/dwbh_backend:latest
+          image: errorpirate/dwbh-backend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8089
-          envForm:
-            - secretRef:
-              name: dwbh-env-secret
+          volumeMounts: 
+            - name: env-file 
+              mountPath: / 
+              subPath: .env 
+      volumes: 
+        - name: env-file 
+          configMap: 
+            name: dwbh-env-config
 ---
 apiVersion: v1
 kind: Service

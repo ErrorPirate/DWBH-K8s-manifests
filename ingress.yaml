@@ -4,7 +4,6 @@ metadata:
   name: nginx-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
@@ -17,7 +16,7 @@ spec:
                 name: vue-service
                 port:
                   number: 8000
-          - path: /spring(/|$)(.*)
+          - path: /api(/|$)(.*)
             pathType: ImplementationSpecific
             backend:
               service:
