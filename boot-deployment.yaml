@@ -20,7 +20,7 @@ spec:
             - containerPort: 8089
           volumeMounts: 
             - name: env-file 
-              mountPath: /mnt/env/.env
+              mountPath: /mnt/env/
               subPath: .env
       volumes: 
         - name: env-file 
