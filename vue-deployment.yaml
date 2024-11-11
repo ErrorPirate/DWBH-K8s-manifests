@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: vue-container
-          image: errorpirate/dwbh-frontend:166
+          image: errorpirate/dwbh-frontend:167
           imagePullPolicy: Always
           ports:
             - containerPort: 80
