@@ -24,11 +24,4 @@ spec:
                 name: spring-service
                 port:
                   number: 8001
-          - path: /swagger-ui
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: spring-service
-                port:
-                  number: 8001
  
